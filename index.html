@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>전자코 안전 시스템</title>
+
+<style>
+
+body{
+    background:#f5f5f5;
+    font-family:Arial;
+    text-align:center;
+    margin-top:100px;
+}
+
+.card{
+    background:white;
+    width:500px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.2);
+}
+
+.safe{
+    color:green;
+    font-size:40px;
+}
+
+.danger{
+    color:red;
+    font-size:40px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>AI 기반 전자코 시스템</h1>
+
+<h2>현재 감지 가스</h2>
+
+<h1>{{ gas }}</h1>
+
+{% if danger %}
+
+<div class="danger">
+⚠ 메탄올 유출 감지!
+</div>
+
+<script>
+alert("⚠ 위험: 메탄올 유출 감지!");
+</script>
+
+{% else %}
+
+<div class="safe">
+정상 상태
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
